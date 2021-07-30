@@ -91,6 +91,17 @@ function loadScripts() {
                 "js/katalon/selenium-ide/format/java/java-backed-junit4.js"
             ];
             break;
+        case 'js-zaproxy':
+            scriptNames = [
+                'js/katalon/selenium-ide/formatCommandOnlyAdapter.js',
+                'js/katalon/selenium-ide/remoteControl.js',
+                "js/katalon/selenium-ide/format/java/java-rc.js",
+                "js/katalon/selenium-ide/format/java/java-rc-junit4.js",
+                "js/katalon/selenium-ide/format/java/java-rc-testng.js",
+                'js/katalon/selenium-ide/webdriver.js',
+                "js/katalon/selenium-ide/format/js/zaproxy.js"
+            ];
+            break;
         case 'python-appdynamics':
             scriptNames = [
                 'js/katalon/selenium-ide/formatCommandOnlyAdapter.js',
@@ -322,6 +333,9 @@ function displayOnCodeMirror(language, outputScript) {
             case 'java-wd-junit':
             case 'java-rc-junit':
                 mode = 'text/x-java';
+                break;
+            case 'js-zaproxy':
+                mode = 'text/javascript'
                 break;
             case 'python-appdynamics':
             case 'python2-wd-unittest':
